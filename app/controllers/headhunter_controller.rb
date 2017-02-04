@@ -22,7 +22,7 @@ class HeadhunterController < ApplicationController
     elsif session['current_token']
       @client.site=api_site
       token = OAuth2::AccessToken.from_hash(@client, session['current_token'])
-      @response = token.get('/resumes', :headers => { 'User-Agent' => ua })
+      @response = token.get('/me', :headers => { 'User-Agent' => ua })
     end
 
 
