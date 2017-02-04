@@ -1,10 +1,24 @@
-<% if @r %>
-  <%= @r %>
-<% end %>
-<% if @users %>
-  <% @users.each do |user| %>
-    <%= user %>
-    <br>
-    <br>
+<section class="task">
+  <h2>Резюме кандидатов</h2>
+  <%= form_tag("", method: "get", class: "task-actions", id: "candidates") do %>
+    <%= number_field_tag('from_page', '0') %>
+    <%= number_field_tag('to_page', '10') %>
+    <%= text_field_tag(:resume_url, nil, placeholder: "Ссылка на автопоиск") %>
+    <%= submit_tag("Загрузить", class: "button") %>
   <% end %>
-<% end %>
+  <div id="user_list" class="users">
+  </div>
+</section>
+<section class="task">
+  <h2>Отправить письма кандидатам</h2>
+  <%= form_tag("", method: "get", class: "task-actions", id: "send-emails") do %>
+    <%= submit_tag("Отправить всем", class: "button") %>
+  <% end %>
+  <div class="users">
+    <% @subscribers.each do |s| %>
+      <div class="user">
+        <div><%= s[:email] %></div>
+      </div>
+    <% end %>
+  </div>
+</section>

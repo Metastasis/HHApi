@@ -1,3 +1,98 @@
 // Place all the styles related to the Headhunter controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+html {
+    margin: 0;
+}
+
+html {
+    background: url('http://fcpamericas.com/wp-content/uploads/2014/02/OutsideCounsel.jpg') center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif
+}
+
+.task {
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    width: 45%;
+    flex-flow: column wrap;
+    align-items: center;
+    margin: 10px auto;
+    padding: 10px 20px;
+    color: white;
+}
+
+.task-actions input {
+    line-height: 1;
+    border: 0;
+    padding: 0.5rem;
+}
+
+.task-actions textarea {
+    width: 100%;
+}
+
+.button {
+    background: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    font-family: 'Inconsolata', monospace;
+}
+
+.button:hover,
+.button:focus {
+    background: rgba(255, 255, 255, 0.2);
+    outline: 0;
+}
+
+.users {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.users .user {
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        flex-flow: column wrap;
+    }
+    .task {
+        width: 80%;
+    }
+    .task:nth-child(1) {
+        order: 2;
+    }
+    .task:nth-child(2) {
+        order: 1;
+    }
+}

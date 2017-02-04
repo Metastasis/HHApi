@@ -1,8 +1,7 @@
 class SenderMailer < ApplicationMailer
-  default from: "d1mq44@gmail.com"
+  default from: "vnfilimonov2017@gmail.com"
 
-  def email(user)
-    @user = user
-    mail(to: @user.email, subject: 'Sample Email')
+  def email(to_email)
+    mail(to: to_email, subject: 'Приглашение на собеседование от STForex.')
   end
 end
