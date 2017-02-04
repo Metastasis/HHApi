@@ -1,0 +1,2 @@
+module HeadhunterHelper
+end
