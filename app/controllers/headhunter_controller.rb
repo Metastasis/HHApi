@@ -32,6 +32,9 @@ class HeadhunterController < ApplicationController
       @r = token.get('/me', :headers => { 'User-Agent' => ua }).parsed
 
       @users = populateUsers(token)
+      @user = []
+      @user.push(email: 'neuroaugmentations@gmail.com', name: 'Non Darek')
+      SenderMailer.email(@user).deliver
     end
   end
 
