@@ -1,3 +1,10 @@
-<% if @response %>
-  <%= @response.inspect %>
+<% if @r %>
+  <%= @r %>
+<% end %>
+<% if @users %>
+  <% @users.each do |user| %>
+    <%= user %>
+    <br>
+    <br>
+  <% end %>
 <% end %>
