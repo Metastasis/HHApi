@@ -17,7 +17,7 @@ class SubscribersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create subscriber" do
     assert_difference('Subscriber.count') do
-      post subscribers_url, params: { subscriber: { email: @subscriber.email, firstname: @subscriber.firstname, isNotified: @subscriber.isNotified, lastname: @subscriber.lastname, phone: @subscriber.phone } }
+      post subscribers_url, params: { subscriber: { email: @subscriber.email, firstname: @subscriber.firstname, id_hh: @subscriber.id_hh, isNotified: @subscriber.isNotified, lastname: @subscriber.lastname, phone: @subscriber.phone } }
     end
 
     assert_redirected_to subscriber_url(Subscriber.last)
@@ -34,7 +34,7 @@ class SubscribersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update subscriber" do
-    patch subscriber_url(@subscriber), params: { subscriber: { email: @subscriber.email, firstname: @subscriber.firstname, isNotified: @subscriber.isNotified, lastname: @subscriber.lastname, phone: @subscriber.phone } }
+    patch subscriber_url(@subscriber), params: { subscriber: { email: @subscriber.email, firstname: @subscriber.firstname, id_hh: @subscriber.id_hh, isNotified: @subscriber.isNotified, lastname: @subscriber.lastname, phone: @subscriber.phone } }
     assert_redirected_to subscriber_url(@subscriber)
   end
 

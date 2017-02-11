@@ -6,7 +6,7 @@ class AccfetcherJob
     subscribers.each do |user|
       user.isNotified = true
       user.save
-      SenderMailer.email(user.email).deliver
+      SenderMailer.email(user).deliver
     end
   end
 end
