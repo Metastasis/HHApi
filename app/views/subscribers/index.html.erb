@@ -1,7 +1,12 @@
+<% content_for :header do -%>
+  <style>
+    html {
+      background: none;
+    }
+  </style>
+<% end -%>
 <p id="notice"><%= notice %></p>
-
 <h1>Subscribers</h1>
-
 <table>
   <thead>
     <tr>
@@ -14,7 +19,6 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @subscribers.each do |subscriber| %>
       <tr>
@@ -31,7 +35,5 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
-
 <%= link_to 'New Subscriber', new_subscriber_path %>

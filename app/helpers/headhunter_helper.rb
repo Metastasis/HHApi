@@ -69,6 +69,7 @@ module HeadhunterHelper
       lastname = response['last_name']
       phone = ''
       email = ''
+      id_hh = response["id"]
 
       response['contact'].each do |contact|
         if contact['type']['id'] == 'cell'
@@ -80,7 +81,7 @@ module HeadhunterHelper
         end
       end
 
-      users.push(firstname:firstname, lastname:lastname, email:email, phone:phone, isNotified: false)
+      users.push(firstname:firstname, lastname:lastname, email:email, phone:phone, isNotified: false, id_hh: id_hh)
 
       puts "Creating users..."
       Subscriber.where(users.last).first_or_create(users.last)
