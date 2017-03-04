@@ -6,10 +6,3 @@ one:
   email: MyString
   phone: MyString
   isNotified: false
-
-two:
-  firstname: MyString
-  lastname: MyString
-  email: MyString
-  phone: MyString
-  isNotified: false

@@ -33,11 +33,14 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-#OAuth client
+# OAuth client
 gem 'oauth2'
 
-#Background tasks
+# Background tasks
 gem 'sucker_punch', '~> 2.0'
+
+# State-of-the-art encryption gem
+gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
